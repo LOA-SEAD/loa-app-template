@@ -91,6 +91,12 @@ define(
                     class: _class,
                 }, _innerHtml, '#' + _containerId)
             },
+
+            /**
+             * el: function( _params ) {
+             *    return createBaseElement('el', _params)
+             * },
+             */
         }
     }
 )

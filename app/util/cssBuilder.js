@@ -13,8 +13,11 @@ define(function() {
                 this.unload(appenedLinks[0])
             }
         },
-        // load a CSS file into the HTML document
-        // @param _link: filename inside 'cssPath' directory
+        /**
+         * load a CSS file into the HTML document
+         * @param string _link: filename inside 'cssPath' directory
+         * @return mixed
+         */
         load: function( _link ) {
             for ( var link in appenedLinks ) {
                 if ( link === _link ) {
@@ -34,11 +37,14 @@ define(function() {
 
             return this
         },
-        // unload a CSS file and remove it from the document
-        // @param _link: element in appendedLinks array
+        /**
+         * unload a CSS file and remove it from the document
+         * @param _link: element in appendedLinks array
+         * @return mixed
+         */
         unload: function ( _link ) {
             // for each appended link
-            for ( var currIndex in appenedLinks ) {
+            for ( var currIndex in appenedLinks )
                 if ( appenedLinks[currIndex] === _link ) {
                     found = currIndex
                     appenedLinks.splice(currIndex, 1)
@@ -47,10 +53,8 @@ define(function() {
 
                     return this
                 }
-            }
 
-            // link wasn't found
-            return false
+            return false // link wasn't found
         }
     }
 })
