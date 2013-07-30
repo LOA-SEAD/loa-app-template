@@ -1,7 +1,5 @@
 # loa-app-template #
 
----
-
 * **Criado     em:** 07/22/2013
 * **Atualizado em:** 07/29/2013
 
@@ -68,7 +66,7 @@ Anima
     * playSound( _soundID )
     * stopSound( _soundID )
     * saveAndInterrupt() : salva o estado atual de cada som e interrompe a execucao de todos.
-    * restorePreviousState() : retorna execucao de acordo com o estado salvo pelo metodo saveAndInterrupt()
+    * restorePreviousState() : retorna execução de acordo com o estado salvo pelo método saveAndInterrupt().
 
     ** Utilização **
     
@@ -92,4 +90,15 @@ setTimeout(function() {
 }, 10000)
 
 ### CssBuilder ###
+
+    ** Descrição **
+
+    Gerenciador de arquivos CSS.
+
+    ** Métodos **
+
+    * init()
+    * destroy()
+    *
+
 ### HtmlBuilder ###

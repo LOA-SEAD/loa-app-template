@@ -164,10 +164,11 @@
         }
 
         return {
-            init : init,
+            init    : init,
+            destroy : destroy,
             playSound : playSound,
             stopSound : stopSound,
-            saveAndInterrupt : saveAndInterrupt,
+            saveAndInterrupt     : saveAndInterrupt,
             restorePreviousState : restorePreviousState,
         }
     }
