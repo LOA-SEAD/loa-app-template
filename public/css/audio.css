@@ -1,0 +1,11 @@
+#audio-util-controls {
+	position: absolute;
+	right:0;
+	top:0;
+	z-index:1;
+}
+
+#audio-util-btn-toogleMuted {
+	margin-top:-4px;
+	margin-right:-4px;
+}
