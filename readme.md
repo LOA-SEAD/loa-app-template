@@ -17,21 +17,21 @@ Abaixo foram descritos suas respectivas funções, exemplificando.
 
 ### Anima ###
     
-** Descrição **
+#### Descrição ####
 
 Interface para criação de sequências de animações. Com uma estrutura HTML e CSS definida,
 o módulo irá carregá-la e exibir os frames sequencialmente, da maneira que foram escritos.
 
-** Utilização **
+### Utilização ###
 
 Adicione `<div class="anima-frame" />` e, dentro desses, insira os elementos que devem
 aparecer em cada sequência da animação.
 
 Faça a requisição do módulo anima e execute o comando `Anima.init('autoplay', { duration: FLOAT, interval: FLOAT })`.
 
-Exemplo de execução:
+### Exemplo de execução: ###
 
-** anima.html **
+####anima.html####
 
     <div id="anima-container" class="aria-live">
         <div class="anima-frame anima-figure"><img src="..." /></div>
@@ -39,7 +39,7 @@ Exemplo de execução:
         <div class="anima-frame anima-text">Feito pelo LOA</div>
     </div>
 
-** AppController.js **
+####AppController.js####
 
     Anima
         .init({
@@ -50,7 +50,7 @@ Exemplo de execução:
 
 ### Audio ###
 
-** Descrição **
+####Descrição####
 
 Gerenciador de efeitos sonoros.
 
@@ -59,7 +59,7 @@ Arquivos relacionados:
 * app/view/audio.html
 * app/config/util/audio.js
 
-** Métodos **
+#### Métodos ####
 
 * init()
 * destroy()
@@ -68,11 +68,11 @@ Arquivos relacionados:
 * saveAndInterrupt() : salva o estado atual de cada som e interrompe a execucao de todos.
 * restorePreviousState() : retorna execução de acordo com o estado salvo pelo método saveAndInterrupt().
 
-** Utilização **
+#### Utilização ####
     
 Existe um arquivo `app/public/audio/fase2.ogg` ou `app/public/audio/fase2.mp3`.
 
-** app/config/util/audio.js **
+#### app/config/util/audio.js ####
 
     initiallyMuted: false,
         soundList: {
@@ -93,11 +93,11 @@ Existe um arquivo `app/public/audio/fase2.ogg` ou `app/public/audio/fase2.mp3`.
 
 ### CssBuilder ###
 
-** Descrição **
+#### Descrição ####
 
 `Loader` de estruturas de estilo CSS contidas na pasta `app/public/css`.
 
-** Métodos **
+#### Métodos ####
 
 * isEmpty()       : verifica se existe algum CSS carregado por este componente.
 * empty()         : remove todos os referenciais e arquivos carregados.
@@ -105,7 +105,7 @@ Existe um arquivo `app/public/audio/fase2.ogg` ou `app/public/audio/fase2.mp3`.
 um referencial para esse elemento.
 * unload( _link ) : remove o referencial para o @_link carregado e o retira do documento HTML.
 
-** Utilização **
+#### Utilização ####
 
 Existem os arquivos `app/public/css/bootstrap.min.css` e `app/public/css/default.css`
 
@@ -117,29 +117,29 @@ Existem os arquivos `app/public/css/bootstrap.min.css` e `app/public/css/default
 
 ### HtmlBuilder ###
 
-** Descrição **
+#### Descrição ####
 
 Construtor de estruturas HTML dinâmicas.
 
-** Métodos **
+#### Métodos ####
 
 * isEmpty() : verifica se existe algum elemento HTML construido por este componente.
-* empty()   : remove todos os referenciais e elementos criados.
-* remove()  : 
+* empty()    : remove todos os referenciais e elementos criados.  
+* remove(_id )  : remove um elemento criado por este construtor.
 
-** Elementos que podem ser construídos **
+#### Lista de elementos que podem ser construídos ####
 
 * link
 * div
 * form
 
-** Utilização **
+#### Utilização ####
 
 Existem os arquivos `app/public/css/bootstrap.min.css` e `app/public/css/default.css`.
 Todos os métodos possuem um último parâmetro opcional `_containerId`. Caso `_containerId`
 não seja especificado, o método retornará um elemento jQuery com o HTML criado.
 
-** app/controller/app.js **
+#### app/controller/app.js ####
 
     HTML
         .div('monster-1', '', 'game-monster', 'game-canvas')
