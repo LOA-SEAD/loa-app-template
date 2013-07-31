@@ -1,7 +1,7 @@
 # loa-app-template #
 
 * **Criado     em:** 07/22/2013
-* **Atualizado em:** 07/30/2013
+* **Atualizado em:** 07/31/2013
 
 ## Instação ##
 
@@ -109,7 +109,7 @@ um referencial para esse elemento.
 
 Existem os arquivos `app/public/css/bootstrap.min.css` e `app/public/css/default.css`
 
-** app/controller/app.js **
+#### app/controller/app.js ####
 
     CSS
         .load('bootstrap.min')
@@ -135,7 +135,6 @@ Construtor de estruturas HTML dinâmicas.
 
 #### Utilização ####
 
-Existem os arquivos `app/public/css/bootstrap.min.css` e `app/public/css/default.css`.
 Todos os métodos possuem um último parâmetro opcional `_containerId`. Caso `_containerId`
 não seja especificado, o método retornará um elemento jQuery com o HTML criado.
 
