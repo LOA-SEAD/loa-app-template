@@ -143,6 +143,3 @@ não seja especificado, o método retornará um elemento jQuery com o HTML criad
     HTML
         .div('monster-1', '', 'game-monster', 'game-canvas')
     var $newMonster = HTML.div('monster-2', '', 'game-monster')
-
----
-EOF
